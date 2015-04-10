@@ -10,9 +10,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    post = find_post
-
-    render json: post
+    render json: find_post
   end
 
   def update
