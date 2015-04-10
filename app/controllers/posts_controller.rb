@@ -4,5 +4,6 @@ class PostsController < ApplicationController
   end
 
   def create
+    Post.create(params)
   end
 end
