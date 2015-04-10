@@ -10,20 +10,20 @@ class PostsController < ApplicationController
   end
 
   def show
-    post = Post.find(params[:id])
+    post = find_post
 
     render json: post
   end
 
   def update
-    post = Post.find(params[:id])
+    post = find_post
     post.update(post_params)
 
     render json: post
   end
 
   def destroy
-    post = Post.find(params[:id])
+    post = find_post
     post.destroy
 
     render json: post
@@ -33,5 +33,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+
+  def find_post
+    Post.find(params[:id])
   end
 end
