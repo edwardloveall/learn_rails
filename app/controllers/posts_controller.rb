@@ -9,6 +9,9 @@ class PostsController < ApplicationController
     render json: post
   end
 
+  def show
+  end
+
   private
 
   def post_params
