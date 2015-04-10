@@ -22,6 +22,9 @@ class PostsController < ApplicationController
     render json: post
   end
 
+  def destroy
+  end
+
   private
 
   def post_params
